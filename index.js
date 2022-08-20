@@ -28,6 +28,3 @@ app.listen(port, function(err) {
 
 //use express router and index.js is primary route from where all routes will be defined 
 app.use('/', require('./routes'));
-
-
-//set up an view engine
