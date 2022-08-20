@@ -5,7 +5,6 @@
 // now fire up our express server,  npm install express and check package.jason dependancies
 
 const express = require('express');
-const { consumers } = require('stream');
 const port = 8000;
 const app = express();
 
@@ -19,3 +18,8 @@ app.listen(port, function(err) {
 
     console.log(`server is up and running at port : ${port}`);
 });
+
+// now we have to setup route and controllers
+
+//use express router
+app.use('/', require('./routes/index'));
