@@ -9,6 +9,11 @@ const port = 8000;
 const app = express();
 
 
+//set view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+
 
 app.listen(port, function(err) {
     if (err) {
@@ -21,5 +26,8 @@ app.listen(port, function(err) {
 
 // now we have to setup route and controllers
 
-//use express router
-app.use('/', require('./routes/index'));
+//use express router and index.js is primary route from where all routes will be defined 
+app.use('/', require('./routes'));
+
+
+//set up an view engine
