@@ -3,3 +3,19 @@
 // routes will store all the paths and fuctn called in routes will be stored in controller 
 // models will store schemas , config will store mongoose config and views will be our view engine pages
 // now fire up our express server,  npm install express and check package.jason dependancies
+
+const express = require('express');
+const { consumers } = require('stream');
+const port = 8000;
+const app = express();
+
+
+
+app.listen(port, function(err) {
+    if (err) {
+        console.log(`error to connecting server at port ${port}`);
+        return;
+    }
+
+    console.log(`server is up and running at port : ${port}`);
+});
